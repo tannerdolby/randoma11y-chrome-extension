@@ -100,6 +100,32 @@ li button:hover {
     border: none;
 }
 
+.wcag-info {
+    background: rgb(242, 242, 242);
+    padding: 0 8px;
+    margin-bottom: 8px;
+    border: 1px solid lightgray;
+}
+
 .wcag-info p {
-    margin: 0;
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wcag-compliance {
+    font-size: 12px;
+    border-radius: 500px;
+    padding: 2px 8px;
+}
+
+.wcag-compliance.pass {
+    color: #fff;
+    background-color: green;
+}
+
+.wcag-compliance.fail {
+    color: #fff;
+    background: red;
 }

@@ -35,6 +35,14 @@ function format(colorArr) {
     return colorArr.map(c => parseInt(c.trim(), 10));
 }
 
+function createSpan(content) {
+    const span = document.createElement("span");
+    span.setAttribute("class", "wcag-compliance");
+    span.textContent = content ? "pass" : "fail";
+    span.classList.add(content ? "pass" : "fail")
+    return span;
+}
+
 const elements = [
     "h1",
     "h2",
@@ -105,6 +113,9 @@ inputs.forEach(input => input.addEventListener("click", async () => {
             wcagGraphicalObjAndUI
         } = theme["palette"]["contrast"];
 
+        const span = document.createElement("span");
+        span.setAttribute("class", "wcag-compliance");
+
         c1.textContent = colorOne;
         c2.textContent = colorTwo;
         c1.style.backgroundColor = colorOne;
@@ -112,11 +123,16 @@ inputs.forEach(input => input.addEventListener("click", async () => {
         c1.style.color = colorTwo;
         c2.style.color= colorOne;
         contrastRatio.textContent = `Contrast Ratio: ${ratio}:1`;
-        wcagAANormal.textContent = `WCAG AA Normal Text: <span>${wcagAANormalText}</span>`;
-        wcagAALarge.textContent = `WCAG AA Large Text: <span>${wcagAALargeText}</span>`;
-        wcagAAANormal.textContent = `WCAG AAA Normal Text: <span>${wcagAAANormalText}</span>`;
-        wcagAAALarge.textContent = `WCAG AAA Large Text: <span>${wcagAAALargeText}</span>`;
-        wcagGoAndUI.textContent = `WCAG Graphical Objects and UI components: <span>${wcagGraphicalObjAndUI}</span>`;
+        wcagAANormal.textContent = "WCAG AA Normal Text:";
+        wcagAALarge.textContent = "WCAG AA Large Text:";
+        wcagAAANormal.textContent = "WCAG AAA Normal Text:";
+        wcagAAALarge.textContent = "WCAG AAA Large Text:";
+        wcagGoAndUI.textContent = "WCAG Graphical Objects and UI:"
+        wcagAANormal.appendChild(createSpan(wcagAANormalText));
+        wcagAALarge.appendChild(createSpan(wcagAALargeText));
+        wcagAAANormal.appendChild(createSpan(wcagAAANormalText));
+        wcagAAALarge.appendChild(createSpan(wcagAAALargeText));
+        wcagGoAndUI.appendChild(createSpan(wcagGraphicalObjAndUI));
     });
 }));
 
