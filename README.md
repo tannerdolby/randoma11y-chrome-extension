@@ -5,7 +5,7 @@ WIP - Add options.js/options page
 
 ## Demo
 
-![Demo image of extension being used in Chrome](https://user-images.githubusercontent.com/48612525/136687531-c3a14994-5525-4e5a-8590-b138832fce63.png)
+![Demo image of extension being used in Chrome](https://user-images.githubusercontent.com/48612525/136718292-585fc50e-4aa4-46a5-a71b-06b8b33feaab.png)
 
 ## Todo
 - Handle hover states
