@@ -9,7 +9,19 @@ chrome.storage.sync.get("themes", ({ themes }) => {
     });
 });
 
-// reference: https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+function findTheme(c1, c2, themes) {
+    let theme = {};
+    for (t of themes) {
+        let { colorOne, colorTwo } = t["palette"];
+        if (colorOne == c1 & colorTwo == c2) {
+            theme = t;
+            console.log(t, "YEP");
+            console.log(theme, "YEPP");
+        }
+    }
+    return theme;
+}
+
 function toHex(item) {
     let hex = item.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
@@ -54,8 +66,8 @@ inputs.forEach(input => input.addEventListener("click", async () => {
 
     let args = [
         elements,
-        input.style.color,
         input.style.backgroundColor,
+        input.style.color,
         false
     ];
 
@@ -66,47 +78,48 @@ inputs.forEach(input => input.addEventListener("click", async () => {
         args: [args]
     });
 
-
     const currTheme = document.querySelector(".current-theme");
+    currTheme.classList.remove("visually-hidden");
 
-    let c1, c2, ratio;
     let [r1, g1, b1] = format(args[1].split(","));
     let [r2, g2, b2] = format(args[2].split(","));
+    let hex1 = rgbToHex(r1, g1, b1);
+    let hex2 = rgbToHex(r2, g2, b2);
 
-    console.log(currTheme.childElementCount, "YOOOO");
-    // todo: Refactor!
-    if (currTheme.childElementCount == 0) {
-        c1 = document.createElement("div");
-        c2 = document.createElement("div");
-        let wrapper = document.createElement("div");
-        wrapper.setAttribute("class", "wrapper");
-        ratio = document.createElement("p");
-        ratio.setAttribute("class", "contrast-ratio");
-        ratio.textContent = "Contrast Ratio: 5.15" + ":1";
-        c1.setAttribute("class", "color-one");
-        c2.setAttribute("class", "color-two");
-        // abstract this (function for styling the selected theme)
-        c1.textContent = rgbToHex(r1, g1, b1);
-        c2.textContent = rgbToHex(r2, g2, b2);
-        c1.style.backgroundColor = rgbToHex(r1, g1, b1);
-        c2.style.backgroundColor = rgbToHex(r2, g2, b2);
-        c1.style.color = rgbToHex(r2, g2, b2);
-        c2.style.color= rgbToHex(r1, g1, b1);;
-        wrapper.appendChild(c1);
-        wrapper.appendChild(c2);
-        currTheme.appendChild(wrapper);
-        currTheme.appendChild(ratio);
-    } else {
-        c1 = document.querySelector(".color-one");
-        c2 = document.querySelector(".color-two");
-        c1.textContent = rgbToHex(r1, g1, b1);
-        c2.textContent = rgbToHex(r2, g2, b2);
-        c1.style.backgroundColor = rgbToHex(r1, g1, b1);
-        c2.style.backgroundColor = rgbToHex(r2, g2, b2);
-        c1.style.color = rgbToHex(r2, g2, b2);
-        c2.style.color= rgbToHex(r1, g1, b1);
-        ratio.textContent = "Contrast Ratio: 5.15" + ":1";
-    }
+    let c1 = document.querySelector(".color-one");
+    let c2 = document.querySelector(".color-two");
+    contrastRatio = document.querySelector(".contrast-ratio");
+    wcagAANormal = document.querySelector(".wcag-aa-normal");
+    wcagAALarge = document.querySelector(".wcag-aa-large");
+    wcagAAANormal = document.querySelector(".wcag-aaa-normal");
+    wcagAAALarge = document.querySelector(".wcag-aaa-large");
+    wcagGoAndUI = document.querySelector(".wcag-go-and-ui");
+
+    chrome.storage.sync.get("themes", ({ themes }) => {
+        let theme = findTheme(hex1, hex2, themes);
+        let { colorOne, colorTwo } = theme["palette"];
+        let {
+            ratio,
+            wcagAANormalText, 
+            wcagAALargeText, 
+            wcagAAANormalText, 
+            wcagAAALargeText, 
+            wcagGraphicalObjAndUI
+        } = theme["palette"]["contrast"];
+
+        c1.textContent = colorOne;
+        c2.textContent = colorTwo;
+        c1.style.backgroundColor = colorOne;
+        c2.style.backgroundColor = colorTwo;
+        c1.style.color = colorOne;
+        c2.style.color= colorTwo;
+        contrastRatio.textContent = `Contrast Ratio: ${ratio}:1`;
+        wcagAANormal.textContent = `WCAG AA Normal Text: <span>${wcagAANormalText}</span>`;
+        wcagAALarge.textContent = `WCAG AA Large Text: <span>${wcagAALargeText}</span>`;
+        wcagAAANormal.textContent = `WCAG AAA Normal Text: <span>${wcagAAANormalText}</span>`;
+        wcagAAALarge.textContent = `WCAG AAA Large Text: <span>${wcagAAALargeText}</span>`;
+        wcagGoAndUI.textContent = `WCAG Graphical Objects and UI components: <span>${wcagGraphicalObjAndUI}</span>`;
+    });
 }));
 
 function setPageTheme(args) {

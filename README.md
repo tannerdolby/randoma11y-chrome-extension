@@ -12,4 +12,4 @@ WIP - Add options.js/options page
 - Cleanup/review
 
 ## Kudos
-All color pairings and palettes are provided by [randoma11y.com] and the [Components AI](https://components.ai/) team.
+All color pairings and palettes are provided by [randoma11y.com](https://randoma11y.com) and the [Components AI](https://components.ai/) team.

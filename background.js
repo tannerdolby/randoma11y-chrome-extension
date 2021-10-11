@@ -1,7 +1,8 @@
-// Set a persistent data point for default background color
-let backgroundColor = "#f06";
+/* 
+Random A11y Theme Extension - All themes are for public use and are 
+the property of randoma11y.com from the Components AI team
+*/
 
-// randoma11y colors - color palettes provided by randoma11y.com and the Components AI team
 const themes = [
     {
         palette: {
@@ -10,11 +11,11 @@ const themes = [
             contrast: {
                 ratio: 4.55,
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -25,11 +26,11 @@ const themes = [
             contrast: {
                 ratio: 5.02, // 5.02:1
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -40,11 +41,11 @@ const themes = [
             contrast: {
                 ratio: 4.87,
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -55,11 +56,11 @@ const themes = [
             contrast: {
                 ratio: 11.32,
                 isAAA: true,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: true,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: true,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -70,11 +71,11 @@ const themes = [
             contrast: {
                 ratio: 7.41,
                 isAAA: true,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: true,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: true,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -85,11 +86,11 @@ const themes = [
             contrast: {
                 ratio: 4.54,
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -100,11 +101,11 @@ const themes = [
             contrast: {
                 ratio: 5.39,
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -114,11 +115,11 @@ const themes = [
             colorTwo: "#c1a3bb",
             contrast: {
                 ratio: 5.36,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -129,11 +130,11 @@ const themes = [
             contrast: {
                 ratio: 11.05,
                 isAAA: true,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: true,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: true,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -144,11 +145,11 @@ const themes = [
             contrast: {
                 ratio: 6.52,
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -159,11 +160,11 @@ const themes = [
             contrast: {
                 ratio: 12.39,
                 isAAA: true,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: true,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: true,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -174,11 +175,11 @@ const themes = [
             contrast: {
                 ratio: 4.56,
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -189,11 +190,11 @@ const themes = [
             contrast: {
                 ratio: 4.60,
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     },
@@ -204,11 +205,11 @@ const themes = [
             contrast: {
                 ratio: 4.50,
                 isAAA: false,
-                WCAG_AA_normal_text: true,
-                WCAG_AAA_normal_text: false,
-                WCAG_AA_large_text: true,
-                WCAG_AAA_large_text: true,
-                WCAG_Graphical_Objects_and_UI: true
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
             }
         }
     }

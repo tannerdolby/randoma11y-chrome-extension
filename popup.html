@@ -6,7 +6,20 @@
   <body>
     <div class="popup">
         <h1>Choose a randoma11y theme for your current page:</h1>
-        <div class="current-theme"></div>
+        <div class="current-theme visually-hidden">
+          <div class="wrapper">
+            <div class="color-one"></div>
+            <div class="color-two"></div>
+          </div>
+          <p class="contrast-ratio"></p>
+          <div class="wcag-info">
+            <p class="wcag-aa-normal"></p>
+            <p class="wcag-aa-large"></p>
+            <p class="wcag-aaa-normal"></p>
+            <p class="wcag-aaa-large"></p>
+            <p class="wcag-go-and-ui"></p>
+          </div>
+        </div>
         <details class="custom-theme">
           <summary>Or enter your own theme colors:</summary>
           <label for="colorOne">Color One</label>
