@@ -44,3 +44,47 @@ li button:hover {
     cursor: pointer;
     border: 2px dashed #f06;
 }
+
+.current-theme {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.current-theme .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-theme .wrapper div {
+    height: 3.5rem;
+    width: 100%;
+    padding: 3px;
+}
+
+.custom-theme {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.custom-theme summary {
+    margin-bottom: 8px;
+}
+
+.custom-theme input {
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 3px 5px;
+}
+
+.custom-theme button {
+    width: 100%;
+    margin: 2px 0;
+    border-radius: 2px;
+    padding: 5px 8px;
+    background: #1a6bdd;
+    color: #fff;
+    border: none;
+}
