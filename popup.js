@@ -137,7 +137,7 @@ inputs.forEach(input => input.addEventListener("click", async () => {
 }));
 
 function setPageTheme(args) {
-    const [elements, background, foreground, flip] = args;
+    const [elements, foreground, background, flip] = args;
     
     document.body.style.backgroundColor = flip ? background : foreground;
     
