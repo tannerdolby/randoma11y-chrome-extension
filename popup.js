@@ -15,8 +15,6 @@ function findTheme(c1, c2, themes) {
         let { colorOne, colorTwo } = t["palette"];
         if (colorOne == c1 & colorTwo == c2) {
             theme = t;
-            console.log(t, "YEP");
-            console.log(theme, "YEPP");
         }
     }
     return theme;
@@ -111,8 +109,8 @@ inputs.forEach(input => input.addEventListener("click", async () => {
         c2.textContent = colorTwo;
         c1.style.backgroundColor = colorOne;
         c2.style.backgroundColor = colorTwo;
-        c1.style.color = colorOne;
-        c2.style.color= colorTwo;
+        c1.style.color = colorTwo;
+        c2.style.color= colorOne;
         contrastRatio.textContent = `Contrast Ratio: ${ratio}:1`;
         wcagAANormal.textContent = `WCAG AA Normal Text: <span>${wcagAANormalText}</span>`;
         wcagAALarge.textContent = `WCAG AA Large Text: <span>${wcagAALargeText}</span>`;
@@ -137,7 +135,6 @@ function setPageTheme(args) {
                 node.style.fill = flip ? foreground + "!important" : background;
             }
 
-            // todo: cleanup
             // Traverse any child nodes
             if (node.childNodes.length > 0) {
                 node.childNodes.forEach(n => {
