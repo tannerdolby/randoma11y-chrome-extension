@@ -26,10 +26,12 @@ body {
     height: 250px;
     width: 300px;
     overflow: auto;
+    font-family: -apple-system,arial,"EB Garamond","Helvetica Neue",Helvetica,sans-serif;
 }
 
 .popup h1 {
     font-size: 1.125rem;
+    padding: 0 3px;
 }
 
 .theme-grid {
@@ -53,7 +55,6 @@ li button {
 
 li button:hover {
     cursor: pointer;
-    border: 2px dashed #f06;
 }
 
 .current-theme {

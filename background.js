@@ -7,7 +7,7 @@ const themes = [
     {
         palette: {
             colorOne: "#257c97",
-            colorTwo: "#FFFFA1",
+            colorTwo: "#ffffA1",
             contrast: {
                 ratio: 4.55,
                 isAAA: false,
@@ -24,7 +24,7 @@ const themes = [
             colorOne: "#99e2e0",
             colorTwo: "#535751",
             contrast: {
-                ratio: 5.02, // 5.02:1
+                ratio: 5.02,
                 isAAA: false,
                 wcagAANormalText: true,
                 wcagAAANormalText: false,
