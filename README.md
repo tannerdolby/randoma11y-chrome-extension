@@ -13,6 +13,26 @@ After selecting a theme, it will be applied "as best as it can" to the webpage a
 
 ![Applied theme on hacktoberfest profile page](https://user-images.githubusercontent.com/48612525/136933445-07ebeb92-d690-494f-9b54-e062a2b28ef3.png)
 
+Each theme selected from the popup UI corresponds to an object in the `themes` array stored using the `chrome.storage` API and has the following structure:
+
+```js
+{
+    palette: {
+        colorOne: "#0b2b57",
+        colorTwo: "#13d786",
+        contrast: {
+            ratio: 7.41,
+            isAAA: true,
+            wcagAANormalText: true,
+            wcagAAANormalText: true,
+            wcagAALargeText: true,
+            wcagAAALargeText: true,
+            wcagGraphicalObjAndUI: true
+        }
+    }
+}
+```
+
 ## Description
 
 This extension performs a "blanket" theme transformation which looks good generally to preview a specific theme. But I cannot guarantee every webpage will allow for the theme to be provided in a accessible fashion. 
