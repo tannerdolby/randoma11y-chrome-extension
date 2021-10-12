@@ -22,16 +22,16 @@ body {
 
 .popup {
     margin: 0;
-    padding: 0 12px;
-    height: 250px;
+    padding: 0;
+    max-height: 290px;
     width: 300px;
     overflow: auto;
     font-family: -apple-system,arial,"EB Garamond","Helvetica Neue",Helvetica,sans-serif;
 }
 
 .popup h1 {
-    font-size: 1.125rem;
-    padding: 0 3px;
+    font-size: 1.15rem;
+    padding: 0 5px;
 }
 
 .theme-grid {
@@ -39,7 +39,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
     gap: 5px;
     list-style: none;
-    padding-left: 0;
+    padding: 0 3px;
 }
 
 li button {
@@ -69,6 +69,11 @@ li button:hover {
     justify-content: center;
 }
 
+.contrast-ratio {
+    padding: 0 4px;
+    font-weight: 600;
+}
+
 .current-theme .wrapper div {
     height: 3.5rem;
     width: 100%;
@@ -79,6 +84,7 @@ li button:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0 2px;
 }
 
 .custom-theme summary {
@@ -103,8 +109,8 @@ li button:hover {
 
 .wcag-info {
     background: rgb(242, 242, 242);
-    padding: 0 8px;
-    margin-bottom: 8px;
+    padding: 0 6px;
+    margin: 0 4px 8px;
     border: 1px solid lightgray;
 }
 
@@ -129,4 +135,21 @@ li button:hover {
 .wcag-compliance.fail {
     color: #fff;
     background: red;
+}
+
+.themes-credit {
+    margin: 0;
+    padding: 2px 4px;
+    background: #333;
+    color: #fff;
+}
+
+.themes-credit a {
+    color: #222;
+    color: #fff;
+}
+
+footer a {
+    color: #222;
+    padding: 2px 4px;
 }

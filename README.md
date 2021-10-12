@@ -7,11 +7,11 @@ After selecting a theme, it will be applied "as best as it can" to the webpage a
 
 1. Open the extensions popup UI in a Chrome tab
 
-![Open the popup UI](https://user-images.githubusercontent.com/48612525/136933461-52256e84-8a2f-4d00-9b76-7d424979c152.png)
+![Open the popup UI from the "pinned" area](https://user-images.githubusercontent.com/48612525/137032055-8d927262-79e9-44ad-b3a2-93043137d392.png)
 
 2. Click on a theme from the grid to apply it
 
-![Applied theme on hacktoberfest profile page](https://user-images.githubusercontent.com/48612525/136933445-07ebeb92-d690-494f-9b54-e062a2b28ef3.png)
+![Demo of theme applied in a Chrome tab](https://user-images.githubusercontent.com/48612525/137032240-99ee116e-a5b0-482b-812f-1949ae3961a6.png)
 
 Each theme selected from the popup UI corresponds to an object in the `themes` array stored using the `chrome.storage` API and has the following structure:
 
@@ -44,4 +44,4 @@ Note: Use this extension as a "preview" or "demo" for a specific theme and then 
 - [ ] Allow theme to persist across chrome.tabs
 
 ## Kudos
-All color pairings and palettes are provided by [randoma11y.com](https://randoma11y.com) and the [Components AI](https://components.ai/) team.
+All color pairings and palettes are the property of [randoma11y.com](https://randoma11y.com) and the [Components AI](https://components.ai/) team. 
