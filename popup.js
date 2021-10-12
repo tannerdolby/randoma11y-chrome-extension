@@ -12,19 +12,14 @@ chrome.storage.sync.get("themes", ({ themes }) => {
 function findTheme(c1, c2, themes) {
     let theme = {};
     for (t of themes) {
-        console.log(themes, "AAA");
-        console.log(t["palette"], "SADEG");
-        let { colorOne, colorTwo } = t["palette"];
-        colorOne.toLowerCase();
-        colorTwo.toLowerCase();
-        console.log(c1, colorOne, c2, colorTwo, "CAT JAM");
-        //console.log(colorOne, colorTwo, "RIPERONI");
-        // c1 and c2 will always be lowercase
-        if (colorOne == c1 & colorTwo == c2) {
+        let colorOne = t["palette"]["colorOne"].toLowerCase();
+        let colorTwo = t["palette"]["colorTwo"].toLowerCase();
+
+        if (colorOne == c1 && colorTwo == c2) {
             theme = t;
         }
     }
-    console.log(theme, " HERE");
+
     return theme;
 }
 
@@ -102,12 +97,12 @@ inputs.forEach(input => input.addEventListener("click", async () => {
 
     let c1 = document.querySelector(".color-one");
     let c2 = document.querySelector(".color-two");
-    contrastRatio = document.querySelector(".contrast-ratio");
-    wcagAANormal = document.querySelector(".wcag-aa-normal");
-    wcagAALarge = document.querySelector(".wcag-aa-large");
-    wcagAAANormal = document.querySelector(".wcag-aaa-normal");
-    wcagAAALarge = document.querySelector(".wcag-aaa-large");
-    wcagGoAndUI = document.querySelector(".wcag-go-and-ui");
+    let contrastRatio = document.querySelector(".contrast-ratio");
+    let wcagAANormal = document.querySelector(".wcag-aa-normal");
+    let wcagAALarge = document.querySelector(".wcag-aa-large");
+    let wcagAAANormal = document.querySelector(".wcag-aaa-normal");
+    let wcagAAALarge = document.querySelector(".wcag-aaa-large");
+    let wcagGoAndUI = document.querySelector(".wcag-go-and-ui");
 
     chrome.storage.sync.get("themes", ({ themes }) => {
         let theme = findTheme(hex1, hex2, themes);

@@ -212,6 +212,21 @@ const themes = [
                 wcagGraphicalObjAndUI: true
             }
         }
+    },
+    {
+        palette: {
+            colorOne: "#05e68d",
+            colorTwo: "#7b1d1c",
+            contrast: {
+                ratio: 6.25,
+                isAAA: false,
+                wcagAANormalText: true,
+                wcagAAANormalText: false,
+                wcagAALargeText: true,
+                wcagAAALargeText: true,
+                wcagGraphicalObjAndUI: true
+            }
+        }
     }
 ];
 
