@@ -238,10 +238,5 @@ chrome.runtime.onInstalled.addListener(async () => {
     // using the storage API
     chrome.storage.sync.set({ themes });
     chrome.storage.sync.set({ paletteSize });
-    console.log("Themes: ", themes);
+    console.log(`Themes: ${themes}`);
 });
-
-// todo (for calculating contrast ratio for user input color pairing)
-function getContrastRatio(foregroundColor, backgroundColor) {
-    // Relative luminance of the lighter color
-}

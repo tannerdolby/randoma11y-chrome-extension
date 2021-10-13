@@ -1,6 +1,6 @@
 let inputs = [...document.querySelectorAll(".change-color")];
 
-// Initialize the grid of theme previews
+// Initialize the grid of theme previews in popup UI
 chrome.storage.sync.get("themes", ({ themes }) => {
     inputs.forEach((input, i) => {
         input.textContent = themes[i].palette.contrast.ratio;
@@ -15,11 +15,14 @@ function findTheme(c1, c2, themes) {
         let colorOne = t["palette"]["colorOne"].toLowerCase();
         let colorTwo = t["palette"]["colorTwo"].toLowerCase();
 
+        //  Set the current theme in storage
+        chrome.storage.sync.set({ colorOne });
+        chrome.storage.sync.set({ colorTwo });
+
         if (colorOne == c1 && colorTwo == c2) {
             theme = t;
         }
     }
-
     return theme;
 }
 

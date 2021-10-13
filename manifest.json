@@ -1,6 +1,6 @@
 {
     "name": "Random A11Y Page Themes",
-    "description": "Toggle a random a11y theme for your current webpage in Chrome",
+    "description": "Toggle a randoma11y theme for your current tab in Chrome",
     "version": "1.0",
     "manifest_version": 3,
     "background": {

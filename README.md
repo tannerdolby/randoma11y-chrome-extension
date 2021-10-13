@@ -18,13 +18,13 @@ Each theme selected from the popup UI corresponds to an object in the `themes` a
 ```js
 {
     palette: {
-        colorOne: "#0b2b57",
-        colorTwo: "#13d786",
+        colorOne: "#000321",
+        colorTwo: "#bb5d44",
         contrast: {
-            ratio: 7.41,
-            isAAA: true,
+            ratio: 4.60,
+            isAAA: false,
             wcagAANormalText: true,
-            wcagAAANormalText: true,
+            wcagAAANormalText: false,
             wcagAALargeText: true,
             wcagAAALargeText: true,
             wcagGraphicalObjAndUI: true
