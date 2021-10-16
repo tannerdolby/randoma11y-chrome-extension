@@ -63,7 +63,7 @@ li button:hover {
     width: 100%;
 }
 
-.current-theme .wrapper {
+.current-theme .palette {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,8 +74,8 @@ li button:hover {
     font-weight: 600;
 }
 
-.current-theme .wrapper .color-one,
-.current-theme .wrapper .color-two {
+.current-theme .palette .color-one,
+.current-theme .palette .color-two {
     height: 3.5rem;
     width: 100%;
     padding: 3px 4px;
