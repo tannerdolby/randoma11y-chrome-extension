@@ -39,7 +39,7 @@ This extension performs a "blanket" theme transformation which looks good genera
 
 Note: Use this extension as a "preview" or "demo" for a specific theme and then go checkout the color palette separately in your own development for the best user experience.
 
-## Contributing
+## Running locally
 
 1. Fork this repo
 2. Clone using `git clone git@github.com:tannerdolby/randoma11y-chrome-extension.git`
