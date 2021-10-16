@@ -1,0 +1,27 @@
+{
+  "name": "chrome-extension-randoma11y-themes",
+  "version": "1.0.0",
+  "description": "Change the appearance of a webpage in Chrome by toggling a [randoma11y](https://randoma11y.com) theme. Click on the extension icon to open the popup UI and view the available themes.",
+  "main": "background.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerdolby/randoma11y-chrome-extension.git"
+  },
+  "keywords": [
+    "chrome-extensions",
+    "randoma11y-themes",
+    "theme-overlay"
+  ],
+  "author": "Tanner DOlby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tannerdolby/randoma11y-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/tannerdolby/randoma11y-chrome-extension#readme",
+  "devDependencies": {
+    "cypress": "^8.6.0"
+  }
+}
