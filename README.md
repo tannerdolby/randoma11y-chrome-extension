@@ -39,9 +39,15 @@ This extension performs a "blanket" theme transformation which looks good genera
 
 Note: Use this extension as a "preview" or "demo" for a specific theme and then go checkout the color palette separately in your own development for the best user experience.
 
+## Contributing
+
+1. Fork this repo
+2. Clone using `git clone git@github.com:tannerdolby/randoma11y-chrome-extension.git`
+3. Install dependencies with `npm install` (This is for installing Cypress)
+4. Run tests with `npm run test`
+
 ### Todo
 - [ ] Handle hover states
-- [ ] Allow theme to persist across chrome.tabs
 
 ## Kudos
 All color pairings and palettes are the property of [randoma11y.com](https://randoma11y.com) and the [Components AI](https://components.ai/) team. 
